@@ -12,15 +12,16 @@
 body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  /* justify-content: space-between; */
+  /* align-items: center; */
   gap: 2rem;
 }
 
 .intro {
   display: flex;
   justify-content: space-between;
-  gap: .7rem;
+  align-items: stretch;
+  gap: 3rem;
 
   & h1 {
     font-size: 48px;
@@ -31,7 +32,7 @@ body {
   & button {
     padding: 7px 14px;
     font-weight: 600;
-    border-radius: 10%;
+    border-radius: 10px;
     font-size: initial;
     flex: 0;
     max-width: 7rem;
@@ -56,17 +57,19 @@ button {
 }
 
 .hero {
+  width: 100%;
   background-color: #1F2937;
   color: #F9FAF8;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
-  gap: 3rem;
-  padding-bottom: 3rem;
+  gap: 2.5rem;
+  padding-bottom: 5rem;
+  /* padding: 1vh 5rem 5rem 5rem; */
 
   &>* {
-    width: min(90%, 50rem);
+    width: min(90%, 70rem);
     padding: 1rem;
   }
 
@@ -81,9 +84,12 @@ button {
 
     & span {
       font-size: 24px;
+      font-weight: 800;
     }
 
     & ul {
+      color: inherit;
+      font-size: 18px;
       list-style-type: none;
       display: flex;
       gap: 1rem;
@@ -106,12 +112,13 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  margin-top: 2rem;
-  padding: 2rem;
+  justify-content: center;
+  gap: 2rem;
+
+  padding: 1rem 2rem 3rem 2rem;
 
   & * {
-    color: gray;
+    color: rgb(95, 95, 95);
   }
 
   & header {
@@ -124,7 +131,7 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    gap: 3rem;
 
     & figure {
       display: flex;
@@ -153,13 +160,16 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex: 1 0 auto;
-  padding: 10%;
+  align-items: space-around;
+  flex: 0 0 auto;
+  padding: 7rem 10rem;
 
   background-color: #E5E7EB;
   color: #1F2937;
 
   & blockquote {
+    padding: initial;
+    margin: initial;
     font-size: 36px;
     font-style: italic;
     color: inherit;
@@ -172,5 +182,42 @@ button {
     font-weight: 700;
     font-size: larger;
     align-self: flex-end;
+  }
+}
+
+.action {
+  background-color: #3882F6;
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+  border-radius: 10px;
+  width: min(80%, 80vw);
+  align-self: center;
+  flex: 1 1 auto;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    color: rgb(233, 235, 253);
+    font-size: 18px;
+
+    & :first-child {
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+  }
+
+  & button {
+    font-size: smaller;
+    font-weight: 600;
+    padding: .5em 1.9em;
+    border-color: white;
+    border-style: solid;
+    border-radius: 10px;
   }
 }
