@@ -160,28 +160,31 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: space-around;
+  align-items: center;
   flex: 0 0 auto;
-  padding: 7rem 10rem;
-
+  padding: 7rem 10%;
   background-color: #E5E7EB;
   color: #1F2937;
+  gap: 10px;
 
   & blockquote {
-    padding: initial;
     margin: initial;
+    padding: initial;
     font-size: 36px;
     font-style: italic;
     color: inherit;
     font-weight: 300;
-    align-self: flex-start;
+    flex: 0 0 80%;
   }
 
   & span {
+    
     color: inherit;
     font-weight: 700;
     font-size: larger;
     align-self: flex-end;
+    position: relative;
+    left: -1rem;
   }
 }
 
@@ -219,5 +222,14 @@ button {
     border-color: white;
     border-style: solid;
     border-radius: 10px;
+    background-color: #3882F6
   }
+}
+
+footer {
+  background-color: #1F2937;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
